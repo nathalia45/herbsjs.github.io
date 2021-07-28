@@ -5,13 +5,15 @@ sidebar_label: 5. Generating GraphQL Endpoint
 slug: /tutorial/graphql
 ---
 
+## Introduction to the GraphQL concept
+
 > GraphQL is a query language for your API, and a server-side runtime for executing queries using a type system you define for your data.
 >
 > — [*Introduction to GraphQL | GraphQL*](https://graphql.org/learn)
 
-Herbs supports in REST **and** GraphQL APIs, which means that you can provide two options for the client's request using the same usecase!
+Herbs supports REST **and** GraphQL APIs, which means that you can provide two options for the client's request using the same usecase!
 
-Let's walk through the required setup to use that GraphQL layer of herbs. The GraphQL server needs 3 main defnitions to work:
+Let's walk through the required setup to use that GraphQL layer of herbs. The GraphQL server needs 3 main definitions to work:
 
 - **Types**: to define the entities properties to the client.
 - **Queries**: to define the usecases which fetch data.
@@ -33,7 +35,7 @@ entity('User', {
 })
 ```
 
-the type definition in the GraphQL syntax would be something like this:
+The type definition in the GraphQL syntax would be like this:
 
 ```graphql
 type User {
@@ -70,7 +72,7 @@ module.exports = types
 
 ## Queries
 
-The process to set up GraphQL is pretty similar to the previous one. The main difference is that in the CLI we use a factory function which receive the usecase list.
+The process to set up Queries is pretty similar to the previous one. The main difference is that in the CLI we use a factory function which receive the usecase list.
 
 We are going to use the `usecase2query` util and the `defaultResolver`, both from `@herbsjs/herbs2gql`:
 
@@ -80,7 +82,7 @@ const { usecase2query } = require('@herbs/herbs2gql')
 const defaultResolver = require('./defaultResolver')
 
 // Function require all the usecases in a list.
-function factory (usecases) {
+function factory(usecases) {
     // For each usecase in the list `usecases` convert it to a query and put it in the list of `queries`.
     const queries = usecases.map(usecase => usecase2query(usecase(), defaultResolver(usecase)))
     return queries  
