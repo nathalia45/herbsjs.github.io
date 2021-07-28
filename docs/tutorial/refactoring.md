@@ -41,10 +41,10 @@ Now, the new usecase will show up in the GraphQL operations.
 
 ### Herbs Shelf
 
-The process is similar for [Herbs Shelf](./herbsshelf). Once you've created a new use case, you have to add it to the file `_uclist.js`, passing the `usecase` and the `group` in the `tags`:
+The process is similar for [Herbs Shelf](./herbsshelf). Once you've created a new use case, you have to add it to the file `index.js`, passing the `usecase` and the `group` in the `tags`:
 
 ```js
-// src/domain/usecases/_uclist.js
+// src/domain/usecases/index.js
 module.exports = (injection) => {
     return [
         /* ... previous usecases */
