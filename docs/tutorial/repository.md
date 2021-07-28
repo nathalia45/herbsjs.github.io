@@ -9,8 +9,8 @@ slug: /tutorial/repository
 
 Before we start using the database, is required to set up the configurations. We can choose between `mongo` and `postgres` database to store the data, so the setup is slightly different for each one of them. You can go directly to the one you've chosen:
 
-- [Mongo](https://mongodb.com)
-- [PostgreSQL](https://www.postgresql.org)
+- [Mongo](#set-up-with-mongo)
+- [PostgreSQL](#set-up-with-postgresql)
 
 ### Set up with Mongo
 
