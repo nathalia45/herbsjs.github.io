@@ -28,7 +28,7 @@ module.exports = [
 ]
 ```
 
-Once you have this file, you can use it with `@herbsjs/herbsshelf` to get the HTML content and do what you want with.
+Once you have this file, you can use it with `@herbsjs/herbsshelf` to render the HTML content and set a route.
 
 In this case, is set a route called `/herbsshelf` in the server to provide this:
 
